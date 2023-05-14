@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" >
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .header{
+            min-height: 100vh;
+            width: 100vw;
+            background-image:
+            linear-gradient(to bottom, rgba(0, 0, 0, 0.52), rgba(0, 0, 0, 0.73)),
+            url(wp7374407.jpg);
+            background-size: cover;
+            background-position: center;
+            position: relative;
+
+        }
+
+        .RX{
+            color: rgb(243, 141, 46);
+        }
+
+        nav{
+            display: flex;
+            background-color: rgb(0, 0, 0);
+            padding: 10px;
+            align-items: center;
+            justify-content: space-evenly;
+            font-size: 20px;
+        }
+
+        nav h1{
+            color: aliceblue;
+        }
+
+        li{
+            display: inline-block;
+            padding: 10px;
+            border-radius: 3px;
+            transition: 0.5s;
+        }
+
+        li:hover{
+            background-color: rgb(245, 205, 61);
+        }
+
+        a{
+            color: aliceblue;
+            text-decoration: none;
+        }
+        
+        .fa-solid{
+            color: aliceblue;
+            
+        }
+
+        ul, i{
+            display: inline-block;
+            padding: 10px;
+        }
+
+        
+
+        .banner{
+            position: absolute;
+            top: 40%;
+            left: 30%;
+            font-family: 'Roboto', sans-serif;        
+        }
+
+        .banner h1{
+            color: #ffffff;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 4rem;
+            font-weight: 200;
+        }
+
+        .banner_services{
+            font-family: 'Alfa Slab One', cursive;
+            letter-spacing: 6px;
+            color: rgb(245, 205, 61);
+            font-size: 6rem;
+        }
+
+        .banner p{
+            color: #ffffff;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 1.5rem;
+            padding-bottom: 2rem;
+            min-width: 800px;
+        }
+
+        .banner_button{
+            padding: 0.8rem;
+            border: 0.8px solid rgb(245, 205, 61);
+            background-color: rgb(21, 21, 21);
+            color: rgb(245, 205, 61);
+            border-radius: 4px;
+            transition: 0.5s ease-in-out;
+        }
+
+        .banner_button:hover{
+            color: black;
+            background-color: rgb(245, 205, 61);
+            cursor: pointer;
+        }
+
+
+        nav #x_button,#menu{
+                display: none;
+            }
+
+        @media (max-width :600px){
+            .banner{
+                position: absolute;
+            top: 40%;
+            left: 20%;
+            }
+
+            .banner h1{
+                font-size: 2rem;
+            }
+
+            .banner_services{
+                font-size: 3rem;
+            }
+            
+            .banner p{
+                font-size: 0.6rem;
+            }
+            
+            li{
+                display: block;
+            }
+
+            .nav {
+                position: absolute;
+                background: rgb(245, 205, 61);
+                height: 100vh;
+                width: 200px;
+                top: 0;
+                right: -200px;
+                text-align: left;
+                z-index: 2;    
+                transition: 1s;            
+            }            
+
+            #menu{
+                display: block;
+                position: absolute;
+                right: 10%;
+            }
+            
+            nav #x_button{
+                margin: 0;
+                padding-top: 12px;
+                display: block;
+                font-size: 23px;
+            }
+
+            ul{
+                padding-left: 20px;
+            }
+
+            
+
+        }
+
+        .section2{
+            height: 90vh;
+            font-size: 18px;
+
+        }
+        .services{
+            text-align: center; 
+            margin-top: 30px;
+            font-size: 18px;
+        }
+        .services h1{
+            margin-top: 80px;
+        }
+        
+        .services_tabs{
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 170px;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            column-gap: 10px;
+            row-gap: 40px;
+            margin-bottom: 100px;            
+        }
+
+        
+        
+        .service{
+            width: 350px;
+            height: 362px;
+            padding: 15px;
+            font-size: 20px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            border-radius:10px;
+            color: black;
+            transition:0.5s;
+        }
+
+        .services_tabs img{
+            height: 10rem;
+            padding-bottom: 30px;
+        }
+
+        .services_tabs p{
+            vertical-align: top;
+        }
+
+        .service:hover{
+            background-color: rgb(245, 205, 61);
+            transform: scale(1.2);
+
+        }
+
+        .services_buttons{
+            display: flex;
+            justify-content: center;
+            
+        }
+        
+        input{
+            margin-right: 40PX;
+            font-size: 20PX;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .inquire:hover, 
+        .more:hover{
+            background-color:rgb(245, 205, 61);
+            transform: scaleX(1.2);
+        }
+       
+
+        #reviews{
+            height: 100vh;
+            background-image:
+            linear-gradient(to bottom, rgba(0, 0, 0, 0.52), rgba(0, 0, 0, 0.73)),
+            url(auto-repairs-1024x683.jpeg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        
+        .service-review{
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            color: #ffffff;
+            align-content: center;
+            align-items: center;
+            height: 600px;
+            
+        }
+
+        .review-header{
+            margin: 0 auto;
+            text-align: center;
+            width: 40%;
+            padding-top: 10px;
+            color: #ffffff;
+        }
+        .review-header h1{
+            font-size: 40px;
+            margin-bottom: 30px;
+        }
+
+        .review-header p{
+            font-size: 20px;
+        }
+        
+        .star{
+            width: 100px;
+            margin-left: 125px;
+            margin-bottom: 5px;
+        }
+
+        .review-profile{
+            height: 80px;
+            width: 80px;
+            border-radius: 50%;
+        }
+        
+        .review{
+            width: 350px;
+            padding: 15px;
+            border: #ffffff;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+        }
+
+        .review:hover{
+            transform: scale(1.19);
+        }
+
+        .review, .star{
+            display: block;
+        }
+
+        .viwe-review{
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .view-more-review{
+            text-align: center;
+            font-size: 15px;
+            padding: 10px 5px;
+            display: flex;
+            margin: 0 auto;
+            width: 130px;
+            border-radius: 5px;
+            border: solid rgb(255, 255, 255) 1px;
+            transition: transform 0.3s ease;
+            background-color: transparent;
+            color: #ffffff;
+        }
+
+        .view-more-review:hover{
+            transform: scale(1.2) translateY(-10%);
+            background-color: rgb(249, 182, 38);
+            border: none;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <h1>AUTO <span class="RX"> RX </span> </h1>
+            <div class="nav" id="navlinks">
+                <i class="fa-solid fa-square-xmark" id="x_button"  onclick="hideMenu()"></i>
+                <ul>
+                    <li> <a href="">HOME</a> </li>
+                    <li> <a href="">SERVICES</a> </li>
+                    <li> <a href="">REVIEWS</a> </li>
+                    <li> <a href="">ACCESORIES</a> </li>
+                    <li> <a href="">ABOUTS</a> </li>                    
+                    <li> <a href="">CONTACT US</a> </li>                    
+                </ul>
+            </div>
+            <i class="fa-solid fa-bars" id="menu" onclick="showMenu()"></i>
+        </nav>
+
+
+        <div class="banner">
+            <h1> AUTO REPAIR <br> <span class="banner_services"> SERVICES</span></h1>
+            <p>Well take care of your auto repair needs, brake, tires,oil change and everything in between</p>
+            <button class="banner_button">Read more</button>
+        </div>
+    </section>
+
+    <section class="section2">
+        <div id="services">
+            <div class="services">
+            <h1>OUR SERVICES</h1>
+            <p>Our professionals will perform diagnostic tests, fluid flush and fills, engine replacement, oil changes, and total vehicle overhauls.</p>
+            </div>
+            <div class="services_tabs">
+                <a href="">
+                    <div class="service">
+                    <img src="181231.png" alt="">
+                    <p>Keep your cool with our car aircon service! From routine maintenance to major repairs, we've got you covered when it comes to your vehicle's air conditioning needs..</p>
+                    </div>
+                </a>
+
+                <a href="">
+                    <div class="service">
+                        <img src="1593764.png" alt="">
+                        <p>Keep your tires and your wallet happy with our tire maintenance service! Properly maintained tires can improve fuel efficiency, reduce wear and tear, and even prevent accidents so come see us today and let us help you get the most out of your wheels.</p>
+                    </div>
+                </a>
+
+                <a href="">
+                    <div class="service">
+                        <img src="5463547-200.png" alt="">
+                        <p>Stay in control with our brake maintenance service! From brake pads to rotors, we'll make sure all your braking components are in good condition and working properly, so you can enjoy maximum stopping power and responsiveness..</p>
+                    </div>
+                </a>
+
+                <a href=""></a>
+                    <div class="service">
+                        <img src="776620-200.png" alt="">
+                        <p>Our paint service can help improve the appearance and resale value of a vehicle, as well as protect it from further damage due to exposure to the elements or other environmental factors..</p>
+                    </div>
+                </a>
+            </div>
+            <div class="services_buttons">
+                <input type="submit" value="More Services" class="more">
+                <input type="submit" value="Inquire Now" class="inquire">
+            </div>
+        </div>
+    </section>
+
+    <div id="reviews">
+        <div class="review-header">
+            <h1 class="review-header">Services Reviews</h1>
+            <p>Our satisfied customers have shared their experiences with our car services. From routine maintenance to major repairs, we pride ourselves on providing top-notch service and expertise to keep your vehicle running at its best. Read on to see what our customers have to say about their experiences with us.</p>
+        </div>
+        <div class="service-review">
+
+            <a href="">
+            <div class="review">
+                <img src="Golden-5-Star-Rating-PNG.png" alt="" class="star">
+                <img src="user2.jpg" alt="" class="review-profile">
+                <p>Great experience at this car service! The staff was friendly and knowledgeable, and they completed the maintenance on my car in a timely manner. Will definitely be coming back</p>
+                <button class="viwe-review"> View Review</button>
+            </div>
+            </a>
+
+            <a href="">
+            <div class="review">
+                <img src="Golden-5-Star-Rating-PNG.png" alt="" class="star">
+                <img src="download.jfif" alt="" class="review-profile">
+                <p>Great experience at this car service! The staff was friendly and knowledgeable, and they completed the maintenance on my car in a timely manner. Will definitely be coming back.."</p>
+                <button class="viwe-review"> View Review</button>
+            </div>
+            </a>
+
+            <a href="">
+            <div class="review">
+                <img src="Golden-5-Star-Rating-PNG.png" alt="" class="star">
+                <img src="photo-1438761681033-6461ffad8d80.jfif" alt="" class="review-profile">
+                <p>Quick and easy oil change at this car service! They had me in and out in no time, and even performed a quick inspection to make sure everything else looked good. Will be back for future services.</p>
+                <button class="viwe-review"> View Review</button>
+            </div>
+            </a>
+
+            <a href="">
+            <div class="review">
+                <img src="Golden-5-Star-Rating-PNG.png" alt="" class="star">
+                <img src="Personnel image 4483.jpg" alt="" class="review-profile">
+                <p>Top-notch brake service at this car service! They were able to identify and fix the issue with my brakes, and even gave me some tips for keeping them in good condition. Very impressed with their expertise.</p>
+                <button class="viwe-review"> View Review</button>
+            </div>
+            </a>            
+        </div>
+
+
+        <button class="view-more-review">View More Review</button>
+
+    </div>
+
+
+    <!--script to hide side bar navigation-->
+    <script>
+        var navlinks = document.getElementById("navlinks");
+
+        function showMenu() {
+            navlinks.style.right = "0"
+        }
+
+        function hideMenu() {
+            navlinks.style.right = "-200px"
+        }
+    </script>
+
+</body>
+</html>

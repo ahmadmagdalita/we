@@ -1,0 +1,334 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    min-height: 100vh;
+    width: 100vw;
+    background-image:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.52), rgba(0, 0, 0, 0.73)),
+    url(wp7374407.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+}
+
+.RX{
+    color: rgb(243, 141, 46);
+}
+
+nav{
+    display: flex;
+    background-color: rgb(0, 0, 0);
+    padding: 10px;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 20px;
+}
+
+nav h1{
+    color: aliceblue;
+}
+
+li{
+    display: inline-block;
+    padding: 10px;
+    border-radius: 3px;
+    transition: 0.5s;
+}
+
+li:hover{
+    background-color: rgb(245, 205, 61);
+}
+
+a{
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.fa-solid{
+    color: aliceblue;
+    
+}
+
+ul, i{
+    display: inline-block;
+    padding: 10px;
+}
+
+
+
+.banner{
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    font-family: 'Roboto', sans-serif;        
+}
+
+.banner h1{
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 4rem;
+    font-weight: 200;
+}
+
+.banner_services{
+    font-family: 'Alfa Slab One', cursive;
+    letter-spacing: 6px;
+    color: rgb(245, 205, 61);
+    font-size: 6rem;
+}
+
+.banner p{
+    color: #ffffff;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
+    padding-bottom: 2rem;
+    min-width: 800px;
+}
+
+.banner_button{
+    padding: 0.8rem;
+    border: 0.8px solid rgb(245, 205, 61);
+    background-color: rgb(21, 21, 21);
+    color: rgb(245, 205, 61);
+    border-radius: 4px;
+    transition: 0.5s ease-in-out;
+}
+
+.banner_button:hover{
+    color: black;
+    background-color: rgb(245, 205, 61);
+    cursor: pointer;
+}
+
+
+nav #x_button,#menu{
+        display: none;
+    }
+
+@media (max-width :600px){
+    .banner{
+        position: absolute;
+    top: 40%;
+    left: 20%;
+    }
+
+    .banner h1{
+        font-size: 2rem;
+    }
+
+    .banner_services{
+        font-size: 3rem;
+    }
+    
+    .banner p{
+        font-size: 0.6rem;
+    }
+    
+    li{
+        display: block;
+    }
+
+    .nav {
+        position: absolute;
+        background: rgb(245, 205, 61);
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;    
+        transition: 1s;            
+    }            
+
+    #menu{
+        display: block;
+        position: absolute;
+        right: 10%;
+    }
+    
+    nav #x_button{
+        margin: 0;
+        padding-top: 12px;
+        display: block;
+        font-size: 23px;
+    }
+
+    ul{
+        padding-left: 20px;
+    }
+
+    
+}
+
+
+
+.section2{
+    height: 90vh;
+    font-size: 18px;
+
+}
+.services{
+    text-align: center; 
+    margin-top: 30px;
+    font-size: 18px;
+}
+.services h1{
+    margin-top: 80px;
+}
+
+.services_tabs{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 170px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    column-gap: 10px;
+    row-gap: 40px;
+    margin-bottom: 100px;            
+}
+
+
+
+.service{
+    width: 350px;
+    height: 362px;
+    padding: 15px;
+    font-size: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    border-radius:10px;
+    color: black;
+    transition:0.5s;
+}
+
+.services_tabs img{
+    height: 10rem;
+    padding-bottom: 30px;
+}
+
+.services_tabs p{
+    vertical-align: top;
+}
+
+.service:hover{
+    background-color: rgb(245, 205, 61);
+    transform: scale(1.2);
+
+}
+
+.services_buttons{
+    display: flex;
+    justify-content: center;
+    
+}
+
+input{
+    margin-right: 40PX;
+    font-size: 20PX;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.inquire:hover, 
+.more:hover{
+    background-color:rgb(245, 205, 61);
+    transform: scaleX(1.2);
+}
+
+
+#reviews{
+    height: 100vh;
+    background-image:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.52), rgba(0, 0, 0, 0.73)),
+    url(auto-repairs-1024x683.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.service-review{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    color: #ffffff;
+    align-content: center;
+    align-items: center;
+    height: 600px;
+    
+}
+
+.review-header{
+    margin: 0 auto;
+    text-align: center;
+    width: 40%;
+    padding-top: 10px;
+    color: #ffffff;
+}
+.review-header h1{
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.review-header p{
+    font-size: 20px;
+}
+
+.star{
+    width: 100px;
+    margin-left: 125px;
+    margin-bottom: 5px;
+}
+
+.review-profile{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+}
+
+.review{
+    width: 350px;
+    padding: 15px;
+    border: #ffffff;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.review:hover{
+    transform: scale(1.19);
+}
+
+.review, .star{
+    display: block;
+}
+
+.viwe-review{
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.view-more-review{
+    text-align: center;
+    font-size: 15px;
+    padding: 10px 5px;
+    display: flex;
+    margin: 0 auto;
+    width: 130px;
+    border-radius: 5px;
+    border: solid rgb(255, 255, 255) 1px;
+    transition: transform 0.3s ease;
+    background-color: transparent;
+    color: #ffffff;
+}
+
+.view-more-review:hover{
+    transform: scale(1.2) translateY(-10%);
+    background-color: rgb(249, 182, 38);
+    border: none;
+    color: black;
+}
